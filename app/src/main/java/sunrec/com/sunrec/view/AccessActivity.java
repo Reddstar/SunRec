@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import sunrec.com.sunrec.R;
+import sunrec.com.sunrec.control.RequestHandler;
 import sunrec.com.sunrec.model.Profile;
 
 public class AccessActivity extends AppCompatActivity {

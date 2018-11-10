@@ -5,6 +5,7 @@ package sunrec.com.sunrec.model;
  */
 public class Profile {
 
+    private String _id;
     private String username;
     private String password;
     private User user;
@@ -12,6 +13,14 @@ public class Profile {
 
     private Profile(){
 
+    }
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
     }
 
     public User getUser() {
