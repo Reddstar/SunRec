@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -16,6 +17,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import sunrec.com.sunrec.model.Alert;
 import sunrec.com.sunrec.model.Profile;
 
@@ -74,8 +76,12 @@ public class RequestHandler {
             public void onResponse(Call call, Response response) throws IOException {
                 String debug = response.body().string();
                 if (response.isSuccessful()) {
-                    final String myResponse = response.body().string();
-                    System.out.println(myResponse);
+                    //String myResponse = response.body().string();
+                    //Gson gson = new Gson();
+                    //ArrayList<Alert> listaAlerts = gson.fromJson(myResponse, ArrayList.class);
+
+
+
                     // todo - tratar alertas para mandar o array
                 }
             }

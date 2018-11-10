@@ -40,6 +40,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -81,6 +83,8 @@ public class MainActivity extends FragmentActivity
             }
         });
 
+
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -88,7 +92,8 @@ public class MainActivity extends FragmentActivity
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
+        RequestHandler rh = new RequestHandler();
+        rh.getAlerts();
 
     }
 
@@ -120,6 +125,7 @@ public class MainActivity extends FragmentActivity
     private void callMarkCreateDialog(final LatLng latLng) {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View layout = inflater.inflate(R.layout.alert_maker_dialog, null);
+        final TextView tv = layout.findViewById(R.id.txtIconTitle);
 
         Button btnAddMark = layout.findViewById(R.id.btnMark);
         String[] options = {Icons.TRASH.getDescription(), Icons.FLOODING.getDescription()};
@@ -134,8 +140,10 @@ public class MainActivity extends FragmentActivity
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0){
                     icon.setImageResource(R.drawable.trash_icon_1);
+                    tv.setText(Icons.TRASH.getDescription());
                 } else if (position == 1){
                     icon.setImageResource(R.drawable.flooding_icon_1);
+                    tv.setText(Icons.FLOODING.getDescription());
                 }
             }
 

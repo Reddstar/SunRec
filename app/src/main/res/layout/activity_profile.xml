@@ -25,22 +25,22 @@
                 android:layout_height="130dp"
                 android:src="@drawable/default_profile"/>
 
-                <TextView
-                    android:id="@+id/txtUserName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="26sp"
-                    android:textColor="@color/colorBlack"
-                    android:text="Nome do Usuário"
-                    android:layout_marginTop="22dp"/>
-                <TextView
-                    android:id="@+id/txtUserTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="12dp"
-                    android:text="Titulo do usuario"
-                    />
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Hugoteixeira"
+                android:textColor="@color/colorBlack"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/txtUserTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Bom Samaritano"
+                android:textSize="18sp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
@@ -81,14 +81,14 @@
 
             <TextView
                 android:id="@+id/txtLVL"
-                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:gravity="center"
+                android:text="10"
                 android:textColor="@color/colorBlack"
-                android:text="999"
                 android:textSize="48sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -100,16 +100,17 @@
                 android:layout_centerHorizontal="true"
                 android:text="Experiência"
                 android:layout_height="wrap_content" />
+
             <TextView
                 android:id="@+id/txtCurrentXp"
-                android:layout_below="@+id/txtXp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:text="1298384"
-                android:textStyle="bold"
+                android:layout_below="@+id/txtXp"
+                android:layout_centerHorizontal="true"
+                android:text="100"
                 android:textColor="@color/colorBlack"
-                android:layout_centerHorizontal="true"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/txtTo"
                 android:layout_below="@+id/txtCurrentXp"
@@ -120,16 +121,17 @@
                 android:layout_marginBottom="8dp"
                 android:text="/"
                 android:layout_centerHorizontal="true"/>
+
             <TextView
                 android:id="@+id/txtLevelXp"
-                android:layout_below="@+id/txtTo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:text="160000"
-                android:textStyle="bold"
+                android:layout_below="@+id/txtTo"
+                android:layout_centerHorizontal="true"
+                android:text="150"
                 android:textColor="@color/colorBlack"
-                android:layout_centerHorizontal="true"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
     </android.support.v7.widget.CardView>

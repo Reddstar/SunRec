@@ -30,7 +30,7 @@
                 android:id="@+id/txtIconTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Título do Ícone"
+                android:text="Lixo Exposto"
                 android:layout_below="@id/imageView"
                 android:layout_marginTop="12dp"
                 android:layout_centerHorizontal="true"
