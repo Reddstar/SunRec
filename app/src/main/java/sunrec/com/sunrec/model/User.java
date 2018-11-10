@@ -5,6 +5,7 @@ package sunrec.com.sunrec.model;
  */
 public class User {
 
+    public String _id;
     private String name;
 
 }

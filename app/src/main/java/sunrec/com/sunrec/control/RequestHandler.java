@@ -47,11 +47,11 @@ public class RequestHandler {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String debug = response.body().string();
-                if (response.isSuccessful()) {
-                    final String myResponse = response.body().string();
-                    System.out.println(myResponse);
-                }
+//                String debug = response.body().string();
+//                if (response.isSuccessful()) {
+//                    final String myResponse = response.body().string();
+//
+//                }
             }
         });
     }

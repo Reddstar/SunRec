@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="12dp"
          >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -17,29 +20,29 @@
 
             <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:adjustViewBounds="false"
-            tools:srcCompat="@tools:sample/avatars"
+            android:src="@drawable/trash_icon_1"
             android:layout_centerHorizontal="true"
                 />
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtIconTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="Título do Ícone"
                 android:layout_below="@id/imageView"
-                android:paddingTop="8dp"
+                android:layout_marginTop="12dp"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/colorBlack"
                 android:textSize="20dp"/>
 
             <TextView
-                android:id="@+id/dias"
+                android:id="@+id/txtPostDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_below="@id/textView"
+                android:text="Postado em 10/11/2018"
+                android:layout_below="@id/txtIconTitle"
                 android:paddingTop="8dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="20dp"/>
@@ -49,26 +52,30 @@
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#CCC"
-                android:layout_below="@id/dias"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_below="@id/txtPostDate"
                 android:layout_marginBottom="20dp"/>
 
             <TextView
-                android:id="@+id/descricaoLabel"
+                android:id="@+id/txtDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Descrição: "
                 android:layout_below="@id/view"
-                android:paddingTop="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="14dp"
                 android:layout_centerHorizontal="false"/>
 
             <TextView
-                android:id="@+id/descricao"
+                android:id="@+id/txtDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Texsjdhgfkajsdgfkjhagsdfhjgaskdfjhgkasjdhfgkajshdgfkjahsdgfkjhg"
+                android:text="'Lixo acumulado na parada de ônibus', esta é uma descrição de exemplo para percebermos como funciona"
                 android:layout_below="@id/view"
-                android:layout_toRightOf="@id/descricaoLabel"
-                android:paddingTop="8dp"
+                android:layout_toRightOf="@id/txtDesc"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="20dp"/>
 
@@ -77,27 +84,39 @@
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#CCC"
-                android:layout_below="@id/descricao"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_below="@id/txtDescription"
                 android:layout_marginBottom="20dp"/>
 
             <Button
-                android:id="@+id/confirmar"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnConfirmMark"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_marginStart="14dp"
+                android:backgroundTint="@color/colorPrimary"
                 android:text="Confirmar"
+                android:textColor="@color/colorWhite"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/view2"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="12dp"/>
             <Button
-                android:id="@+id/resolvido"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnSolved"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
                 android:text="Resolvido"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/confirmar"
+                android:layout_below="@id/btnConfirmMark"
                 android:layout_marginBottom="20dp"/>
 
 
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
 </LinearLayout>

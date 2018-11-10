@@ -5,9 +5,9 @@ package sunrec.com.sunrec.model;
  */
 public class Alert {
     private String _id;
-    private User user;
-    private float lat;
-    private float lon;
+    private String user;
+    private double lat;
+    private double lon;
     private String description;
     private String createDate;
 
@@ -27,27 +27,27 @@ public class Alert {
         this._id = _id;
     }
 
-    public User getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(String user) {
         this.user = user;
     }
 
-    public float getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(float lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public float getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(float lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
