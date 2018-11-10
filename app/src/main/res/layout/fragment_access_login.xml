@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="68dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutUser"
+                android:layout_below="@+id/layoutEmail"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="22dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/icon_profile"/>
+                <EditText
+                    android:id="@+id/edtUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Login"
+                    android:layout_marginStart="8dp"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPassword"
+                android:layout_below="@+id/layoutUser"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="22dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/icon_lock"/>
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Senha"
+                    android:layout_marginStart="8dp"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConfirmLogin"
+                android:layout_below="@+id/layoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="42dp"
+                android:textSize="22sp"
+                android:textColor="@color/colorWhite"
+                android:text="Login"
+                android:layout_marginBottom="22dp"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+            <TextView
+                android:id="@+id/txtForgotPassword"
+                android:layout_below="@+id/btnConfirmLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Esqueceu sua senha?"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
