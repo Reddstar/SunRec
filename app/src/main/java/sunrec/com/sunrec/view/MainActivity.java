@@ -217,7 +217,7 @@ public class MainActivity extends FragmentActivity
         /*Setting right attributes to marker, need to get it from server*/
 
         TextView txtTitle = layout.findViewById(R.id.txtIconTitle);
-        txtTitle.setText(Icons.FLOODING.getDescription());
+        txtTitle.setText(Icons.TRASH.getDescription());
 
         TextView txtPostDate = layout.findViewById(R.id.txtPostDate);
         Date date = new Date();

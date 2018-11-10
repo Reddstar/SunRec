@@ -71,7 +71,7 @@
                 android:id="@+id/txtDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="'Lixo acumulado na parada de ônibus', esta é uma descrição de exemplo para percebermos como funciona"
+                android:text="Lixo acumulado na parada de ônibus"
                 android:layout_below="@id/view"
                 android:layout_toRightOf="@id/txtDesc"
                 android:layout_marginTop="8dp"
