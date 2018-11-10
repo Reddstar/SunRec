@@ -1,4 +1,4 @@
-package sunrec.com.sunrec;
+package sunrec.com.sunrec.control;
 
 import com.google.gson.Gson;
 

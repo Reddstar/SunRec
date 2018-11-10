@@ -1,4 +1,4 @@
-package sunrec.com.sunrec;
+package sunrec.com.sunrec.view;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -18,8 +18,8 @@ import android.view.ViewGroup;
 
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
+import sunrec.com.sunrec.R;
 import sunrec.com.sunrec.model.Profile;
 
 public class AccessActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package sunrec.com.sunrec;
+package sunrec.com.sunrec.view;
 
 import android.Manifest;
 import android.content.Intent;
@@ -24,6 +24,9 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+
+import sunrec.com.sunrec.R;
+import sunrec.com.sunrec.control.PermissionMap;
 
 public class MainActivity extends FragmentActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
@@ -109,10 +112,10 @@ public class MainActivity extends FragmentActivity
     }
 
     private void enableMyLocation() {
-        if (ContextCompat.checkSelfPermission(sunrec.com.sunrec.MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             // Permission to access the location is missing.
-            PermissionMap.requestPermission((FragmentActivity) sunrec.com.sunrec.MainActivity.this, LOCATION_PERMISSION_REQUEST_CODE,
+            PermissionMap.requestPermission((FragmentActivity) MainActivity.this, LOCATION_PERMISSION_REQUEST_CODE,
                     Manifest.permission.ACCESS_FINE_LOCATION, true);
         } else if (mMap != null) {
             // Access to the location has been granted to the app.
@@ -121,12 +124,12 @@ public class MainActivity extends FragmentActivity
     }
 
     private void getLocationPermission () {
-        if (ContextCompat.checkSelfPermission(sunrec.com.sunrec.MainActivity.this,
+        if (ContextCompat.checkSelfPermission(MainActivity.this,
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mLocationPermissionGranted = true;
         } else {
-            ActivityCompat.requestPermissions(sunrec.com.sunrec.MainActivity.this,
+            ActivityCompat.requestPermissions(MainActivity.this,
                     new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, Codigo_Local_User);
         }
     }

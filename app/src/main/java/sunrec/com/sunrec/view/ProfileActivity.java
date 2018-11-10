@@ -1,10 +1,12 @@
-package sunrec.com.sunrec;
+package sunrec.com.sunrec.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ProgressBar;
+
+import sunrec.com.sunrec.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

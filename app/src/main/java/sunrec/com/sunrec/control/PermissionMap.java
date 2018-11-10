@@ -1,4 +1,4 @@
-package sunrec.com.sunrec;
+package sunrec.com.sunrec.control;
 
 import android.Manifest;
 import android.app.AlertDialog;

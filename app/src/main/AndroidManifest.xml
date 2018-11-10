@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".view.ProfileActivity" />
         <activity
-            android:name=".AccessActivity"
+            android:name=".view.AccessActivity"
             android:label="@string/title_activity_access"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBwaW33IpmSPIxyklOqAMa3YSkIeVnUtg0"/>
