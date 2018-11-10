@@ -91,15 +91,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-        private void getLocationPermission () {
-            if (ContextCompat.checkSelfPermission(MapsActivity.this,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION)
-                    == PackageManager.PERMISSION_GRANTED) {
-                mLocationPermissionGranted = true;
-            } else {
-                ActivityCompat.requestPermissions(MapsActivity.this,
-                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, Codigo_Local_User);
-                }
-            }
-
+    private void getLocationPermission () {
+        if (ContextCompat.checkSelfPermission(MapsActivity.this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            mLocationPermissionGranted = true;
+        } else {
+            ActivityCompat.requestPermissions(MapsActivity.this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, Codigo_Local_User);
+        }
     }
+
+}

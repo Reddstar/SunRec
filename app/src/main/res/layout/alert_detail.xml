@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+         >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="false"
+            tools:srcCompat="@tools:sample/avatars"
+            android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_below="@id/imageView"
+                android:paddingTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/dias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_below="@id/textView"
+                android:paddingTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#CCC"
+                android:layout_below="@id/dias"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/descricaoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrição: "
+                android:layout_below="@id/view"
+                android:paddingTop="8dp"
+                android:layout_centerHorizontal="false"/>
+
+            <TextView
+                android:id="@+id/descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Texsjdhgfkajsdgfkjhagsdfhjgaskdfjhgkasjdhfgkajshdgfkjahsdgfkjhg"
+                android:layout_below="@id/view"
+                android:layout_toRightOf="@id/descricaoLabel"
+                android:paddingTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#CCC"
+                android:layout_below="@id/descricao"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/confirmar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmar"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/view2"
+                android:layout_marginBottom="20dp"/>
+            <Button
+                android:id="@+id/resolvido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resolvido"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/confirmar"
+                android:layout_marginBottom="20dp"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
