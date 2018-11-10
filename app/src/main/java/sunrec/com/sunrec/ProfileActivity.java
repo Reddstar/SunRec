@@ -8,28 +8,16 @@ import android.widget.ProgressBar;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private ProgressBar progressEXP;
     private ProgressBar progressLVL;
-    private ProgressBar progressRank;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        progressEXP = findViewById(R.id.progressEXP);
         progressLVL = findViewById(R.id.progressLVL);
-        progressRank = findViewById(R.id.progressRank);
-
-        ProgressAnimation expAnimation = new ProgressAnimation(progressEXP, 0f, 100f);
-        expAnimation.setDuration(1000);
-        ProgressAnimation rankAnimation = new ProgressAnimation(progressRank, 0f, 100f);
-        rankAnimation.setDuration(1000);
         ProgressAnimation lvlAnimation = new ProgressAnimation(progressLVL, 0f, calculateXpProgress(666, 1260));
         lvlAnimation.setDuration(1000);
-
-        progressRank.startAnimation(rankAnimation);
-        progressEXP.startAnimation(expAnimation);
         progressLVL.startAnimation(lvlAnimation);
     }
 

@@ -6,107 +6,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
-
-    <LinearLayout
-        android:id="@+id/layoutHeader"
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardHeader"
+        android:layout_margin="12dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="22dp">
-
-        <ImageView
-            android:id="@+id/imgProfile"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="22dp"
-            android:src="@drawable/default_profile"/>
+        android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/txtUserName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="@color/colorBlack"
-                android:text="Nome do Usuário"
-                android:layout_margin="22dp"/>
-            <TextView
-                android:id="@+id/txtUserTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="@color/colorBlack"
-                android:text="Titulo do usuario"
-                android:layout_marginStart="22dp"/>
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/default_profile"/>
 
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textColor="@color/colorBlack"
+                    android:text="Nome do Usuário"
+                    android:layout_marginTop="22dp"/>
+                <TextView
+                    android:id="@+id/txtUserTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Titulo do usuario"
+                    />
         </LinearLayout>
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/layoutRank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/layoutHeader"
-        android:layout_marginTop="40dp">
-
-        <ProgressBar
-            android:id="@+id/progressRank"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerInParent="true"
-            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-            android:progressDrawable="@drawable/circle_shape"
-            android:progress="100"
-            android:rotation="90"/>
-
-        <TextView
-            android:id="@+id/txtRank"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/colorBlack"
-            android:text="99999999"
-            android:textSize="22dp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardExp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/cardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
-        android:layout_below="@+id/layoutRank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <RelativeLayout
-            android:id="@+id/layoutEXP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ProgressBar
-                android:id="@+id/progressEXP"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_centerInParent="true"
-                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                android:progressDrawable="@drawable/circle_shape"
-                android:progress="100"
-                android:rotation="90"/>
-
-            <TextView
-                android:id="@+id/txtEXP"
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorBlack"
-                android:gravity="center"
-                android:text="99999999"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
-        </RelativeLayout>
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="horizontal">
         <RelativeLayout
             android:id="@+id/layoutLVL"
             android:layout_width="wrap_content"
@@ -129,9 +79,43 @@
                 android:gravity="center"
                 android:textColor="@color/colorBlack"
                 android:text="999"
-                android:textSize="48dp"
+                android:textSize="48sp"
                 android:textStyle="bold"/>
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/txtCurrentXp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:text="1298384"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/txtTo"
+                android:layout_below="@+id/txtCurrentXp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="/"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/txtLevelXp"
+                android:layout_below="@+id/txtTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:text="160000"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
     </LinearLayout>
-
+    </android.support.v7.widget.CardView>
 </RelativeLayout>
